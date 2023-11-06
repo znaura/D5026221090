@@ -1,0 +1,23 @@
+h3 {
+    color: #32043a;
+}
+
+p {
+    color: hsl(101, 87%, 12%);
+    text-align: justify;
+}
+
+body {
+    background-color: darkgoldenrod;
+}
+
+.ratakanan{
+    text-align: right;
+    color: darkslategrey;
+    font-weight: bold;
+} 
+
+.kotaku1{
+    border-color: blue;
+    border-style: groove;
+}

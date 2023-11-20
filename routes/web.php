@@ -72,17 +72,31 @@ Route::get('ETS', function() {
     return view('ETS');
 });
 
-Route::get('perkalian', 'App\Http\Controllers\DosenController@index');
+Route::get('perkalian', [DosenController::class, 'index']);
 
-Route::get('show', 'App\Http\Controllers\DosenController@showBlog');
+Route::get('show', [DosenController::class, 'showBlog']);
 
-Route::get('/pegawai/{nama}', 'App\Http\Controllers\DosenController@shownama');
+Route::get('/pegawai/custom/{nama}', [DosenController::class, 'showNama']);
 
-Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
-
-Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
+Route::get('/formulir', [DosenController::class,'formulir']);
+Route::post('/formulir/proses', [DosenController::class,'proses']);
 
 // route blog
-Route::get('/blog', 'App\Http\Controllers\BlogController@home');
-Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
-Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class,'tentang']);
+Route::get('/blog/kontak', [BlogController::class,'kontak']);
+
+//route CRUD Pegawai
+// halaman utama database pegawai
+Route::get('/pegawai', [PegawaiController::class,'index']);
+
+// pegawai tambah
+Route::get('/pegawai/tambah', [PegawaiController::class,'tambah']);
+Route::post('/pegawai/store',[PegawaiController::class,'store']);
+
+// pegawai edit
+Route::get('/pegawai/edit/{id}',[PegawaiController::class,'edit']);
+Route::post('/pegawai/update',[PegawaiController::class,'update']);
+
+// pegawai hapus
+Route::get('/pegawai/hapus/{id}',[PegawaiController::class,'hapus']);

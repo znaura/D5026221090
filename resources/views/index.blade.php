@@ -32,11 +32,11 @@
 			<td>{{ $p->pegawai_jabatan }}</td>
 			<td
             @if ($p->pegawai_umur <= 20)
-                class="bg-green text-white"
+                class="bg-success text-white"
             @elseif ($p->pegawai_umur >= 21 && $p->pegawai_umur <= 30)
-                class="bg-yellow text-red"
+                class="bg-warning text-danger"
             @elseif ($p->pegawai_umur >= 31)
-                class="bg-blue text-white"
+                class="bg-primary text-white"
             @endif
             >{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>

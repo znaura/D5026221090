@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
-
+use App\Http\Controllers\MinumanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +99,26 @@ Route::get('/pegawai/hapus/{id}',[PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiController::class, 'cari']);
 Route::get('/pegawai/view/{id}',[PegawaiController::class, 'view']);
 Route::get('/pegawai/warna',[PegawaiController::class, 'view']);
+
+//route CRUD
+//halaman utama page
+Route::get('/minuman', [MinumanController::class, 'index']);
+
+//tambah utama database minuman
+Route::get('/minuman/tambah',[MinumanController::class, 'tambah']);
+Route::post('/minuman/store',[MinumanController::class, 'store']);
+
+//mengedit data minuman
+Route::get('/minuman/edit/{id}',[MinumanController::class, 'edit']);
+Route::post('/minuman/update',[MinumanController::class, 'update']);
+
+//menghapus data minuman
+Route::get('/minuman/hapus/{id}',[MinumanController::class, 'hapus']);
+
+//cari minuman
+Route::get('/minuman/cari',[MinumanController::class, 'cari']);
+
+//view data minuman
+Route::get('/minuman/view/{id}',[MinumanController::class, 'view']);
+
+// Route::get('/minuman/warna',[MinumanController::class, 'view']);

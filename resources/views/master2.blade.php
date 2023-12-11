@@ -31,7 +31,8 @@
                   {{-- <a class="dropdown-item" href="/pegawai">Pegawai</a>
                   <a class="dropdown-item" href="#">Link 2</a>
                   <a class="dropdown-item" href="#">Link 3</a> --}}
-                  <a class="dropdown-item" href="/minuman">Minuman</a>
+                  {{-- <a class="dropdown-item" href="/minuman">Minuman</a> --}}
+                  <a class="dropdown-item" href="/chat">CHAT</a>
                 </div>
               </li>
             </ul>

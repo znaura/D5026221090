@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\MinumanController;
+use App\Http\Controllers\EmojiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -122,3 +123,7 @@ Route::get('/minuman/cari',[MinumanController::class, 'cari']);
 Route::get('/minuman/view/{id}',[MinumanController::class, 'view']);
 
 // Route::get('/minuman/warna',[MinumanController::class, 'view']);
+
+//halaman utama page emoji
+Route::get('/chat',[EmojiController::class,'index']);
+
